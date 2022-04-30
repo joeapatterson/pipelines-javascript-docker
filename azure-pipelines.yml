@@ -1,4 +1,13 @@
 trigger:
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Azure Resource Manager'
+    azureSubscriptionEndpoint: 'joeorgonly'
+    azureResourceGroup: 'test'
+    kubernetesCluster: 'joeapp'
+    command: 
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
 - master
 
 resources:
